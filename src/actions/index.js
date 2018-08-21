@@ -26,7 +26,7 @@ export function fetchPosts() {
   };
 }
 
-export default createPost(props) {
+export function createPost(props) {
   const request = axios.post(`${ROOT_URL}/posts${KEY}`, props);
 
   return {
@@ -35,7 +35,7 @@ export default createPost(props) {
   };
 }
 
-export default deletePost(id) {
+export function deletePost(id) {
   const request = axios.delete(`${ROOT_URL}/posts/${id}${KEY}`);
 
   return {
